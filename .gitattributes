@@ -1,0 +1,8 @@
+* text=auto
+
+data/** -text
+models/** -text
+notebooks/** -text
+audit/artifact_manifest.json -text
+AUDIT_AWAL_PROJECT.md -text
+PROJECT_PLAN_DASHBOARD_STREAMLIT_BINUS_REVISED.md -text

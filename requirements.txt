@@ -1,0 +1,9 @@
+# Runtime versions verified in Binus-Project-Venv during the artifact audit.
+streamlit==1.59.0
+pandas==3.0.5
+numpy==2.4.6
+openpyxl==3.1.5
+scikit-learn==1.9.0
+scipy==1.18.0
+joblib==1.5.3
+threadpoolctl==3.6.0

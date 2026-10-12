@@ -1,0 +1,87 @@
+{
+  "contract_version": "F8-ROBUST-K4-v1",
+  "generated_at_utc": "2026-10-11T18:03:31.878563+00:00",
+  "mode": "reporting_from_audited_FE_using_frozen_model",
+  "audit_report": "AUDIT_AWAL_PROJECT.md",
+  "model_metadata": {
+    "audit_date": "2026-10-11",
+    "model": "K-Means",
+    "scaler": "RobustScaler",
+    "feature_case": "F8",
+    "n_features": 8,
+    "n_clusters": 4,
+    "k_selection": "MANUAL_OVERRIDE",
+    "random_state": 42,
+    "n_init": 30,
+    "max_iter": 500,
+    "record_count": 5725,
+    "unique_nim_count": 583,
+    "silhouette": 0.8419545975733478,
+    "davies_bouldin": 0.34071568987823875,
+    "calinski_harabasz": 36864.558668704165,
+    "inertia": 42983.126580796845,
+    "sklearn_version": "1.9.0"
+  },
+  "model_features": [
+    "Course_pct",
+    "Dosen_pct",
+    "FD_pct",
+    "PPT_pct",
+    "LN_pct",
+    "VBL_pct",
+    "Submit_pct",
+    "Ketepatan_pct"
+  ],
+  "external_profile_features": [
+    "avg_LO1",
+    "avg_LO2",
+    "avg_LO3",
+    "Total_LO"
+  ],
+  "identifier_columns": [
+    "Kode_Periode",
+    "Kode Kelas",
+    "Kode Dosen",
+    "Kode Mata kuliah",
+    "Mata kuliah",
+    "NIM"
+  ],
+  "row_count": 5725,
+  "cluster_counts": {
+    "0": 4820,
+    "1": 60,
+    "2": 559,
+    "3": 286
+  },
+  "source_sha256": {
+    "data/raw_data.xlsx": "704cd4a76d5a181e1d4cb4762c301b4e93654b39c6682571d1df6f990eb95ea0",
+    "data/feature_engineered_data.xlsx": "1adf7131beb78d8d83abbf57b105224fe387c3a2b03a24e5ec08c46f8b6869f4",
+    "models/clustering_model.pkl": "66e59f24b6194ed442ea0493e00ca3a126ad0e75fd43ce9923dae4269abec629",
+    "models/scaler.pkl": "c97984b738a9e7c2e7d86178c7bae9b3dfa62376c4ffa208f6756bdb8b5f00ea",
+    "notebooks/KMeans_Student_Clustering_8F_Dataset_V3.ipynb": "6ee793dccc8e8eab3e230b2d3bcc4a63fca30bc97489cd38e6c61c43e54a6d2d"
+  },
+  "documentation_sha256": {
+    "PROJECT_PLAN_DASHBOARD_STREAMLIT_BINUS_REVISED.md": "9c1483de4bae70852df8dad023806e1e68a86fcab44e1b606e74f7dfcf732fe0",
+    "AUDIT_AWAL_PROJECT.md": "605f7198e4646bcdce35edabf5e57476a03e7ee68f0c5a666dabea83f5272751",
+    "artifact_manifest.json": "92ffce63d640f00ddda07456380007a20cbb7fdc72f0c620ebf13dec40cff2ca"
+  },
+  "project_plan_changed_since_audit": true,
+  "output_sha256": {
+    "clustered_data.csv": "c4d6350dd3f16843cd3250c43ac25257dc42d23962e907e8e5299cda226df302",
+    "cluster_summary.csv": "a61b84826fc6ee666f13e150da1705371f8e0040879b428ab9e3914f4affd1f5"
+  },
+  "known_limitations": [
+    "Ketepatan_pct belum konsisten dengan kandidat rumus timestamp/deadline raw pada 1.886 baris. Reporting memakai nilai FE tersimpan; provenance raw ke FE belum tuntas.",
+    "Submit_pct memiliki IQR nol; skala fitur ini berpotensi mendominasi jarak clustering.",
+    "K=4 dipilih manual. Nomor cluster tidak menyatakan urutan kualitas mahasiswa."
+  ],
+  "python_packages": {
+    "pandas": "3.0.5",
+    "numpy": "2.4.6",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "joblib": "1.5.3",
+    "openpyxl": "3.1.5",
+    "streamlit": "1.59.0"
+  }
+}
