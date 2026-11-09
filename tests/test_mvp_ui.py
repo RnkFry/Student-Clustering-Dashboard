@@ -53,7 +53,8 @@ class MvpUiTests(unittest.TestCase):
             ):
                 stack.enter_context(patch.object(cls, name, side_effect=AssertionError("UI must use saved labels")))
             app = self.app()
-            self.assertEqual(len(app.sidebar.radio[0].options), 8)
+            self.assertEqual(len(app.sidebar.radio[0].options), 9)
+            self.assertIn("Rekomendasi Strategis Prodi", app.sidebar.radio[0].options)
             chart_count = 0
             for menu in app.sidebar.radio[0].options:
                 with self.subTest(menu=menu):

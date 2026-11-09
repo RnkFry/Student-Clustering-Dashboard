@@ -4,7 +4,7 @@ import streamlit as st
 
 from sections import (
     home, data_understanding, eda_raw, feature_engineering, modeling_pipeline,
-    cluster_analysis, cluster_interpretation, download_result,
+    cluster_analysis, cluster_interpretation, recommendation, download_result,
 )
 from src.config import KNOWN_LIMITATIONS, ModelContractError
 from src.data_loader import load_reporting_data
@@ -18,6 +18,7 @@ SECTIONS = {
     "Modeling Pipeline": modeling_pipeline,
     "Cluster Analysis": cluster_analysis,
     "Cluster Interpretation": cluster_interpretation,
+    "Rekomendasi Strategis Prodi": recommendation,
     "Download Result": download_result,
 }
 
